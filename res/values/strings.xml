@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">嗨图</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+     <!-- Shown in a drop-down list on the main screen, indicating that all conference themes
+    are being displayed. Themes are major categories for sessions (the themes are Design,
+    Develop and Distribute). -->
+    <string name="all_themes">All Themes</string>
+
+    <!-- Shown in a drop-down list on the main screen, indicating that all conference topics
+    are being displayed. Topics are major categories for sessions (example topics are: Android,
+    Chrome, Google APIs, Wearables, etc). -->
+    <string name="all_topics">All Topics</string>
+
+    <!-- Shown in a drop-down list on the main screen, indicating that all session types
+    are being displayed. Some examples of session types are: session, office hours, code lab. -->
+    <string name="all_types">All Types</string>
+      <!-- Menu item that allows user to configure the conference WiFi on their device. -->
+    <string name="description_configure_wifi">Configure Wi-Fi</string>
+     
+    <!-- Text for a button which will add a wi-fi network -->
+    <string name="wifi_dialog_button_configure">Add WiFi Network</string>
+
+    <!-- Text for a button which will open the user's Wi-Fi settings -->
+    <string name="wifi_dialog_button_settings">Open WiFi Settings</string>
+
+    <!-- Toast failure message if the user's wifi couldn't be updated -->
+    <string name="wifi_install_error_message">Sorry, unable to update WiFi configuration</string>
+    
+     <!-- Explanation of wifi setup that appears in the WiFi setup dialog box. -->
+    <string name="description_setup_wifi_body"><![CDATA[
+        Since you\'re attending in person, we can set up this device to access the conference Wi-Fi network (5Ghz only).
+        By configuring your Wi-Fi now, you\'ll help prevent network congestion.
+    ]]></string>
+     <!-- Shown on Configure WiFi dialog, instructing user on what button to click. -->
+    <string name="calltoaction_wifi_configure"><![CDATA[
+        <br><br>Tap \'Add Wi-Fi Network\' to proceed.
+    ]]></string>
+
+    <!-- Shown on Configure WiFi dialog, instructing user on what button to click. -->
+    <string name="calltoaction_wifi_settings"><![CDATA[
+        <br><br>Tap \'Open Wi-Fi Settings\' to enable Wi-Fi.
+    ]]></string>
+    
+     <!-- Shown as the title of the user's schedule for today -->
+    <string name="day_title_today">Today</string>
+
+    <!-- Shown as the title of the user's schedule for tomorrow -->
+    <string name="day_title_tomorrow">Tomorrow</string>
+
+    <!-- Shown as the title of the user's schedule for yesterday -->
+    <string name="day_title_yesterday">Yesterday</string>
+     <!-- Label for exploration category which groups session topics -->
+    <string name="topics">Topics</string>
+    <!-- Short text label indicating a grouping of themes -->
+    <string name="themes">Themes</string>
+     <!-- Label for exploration category which groups session types -->
+    <string name="types">Types</string>
+</resources>

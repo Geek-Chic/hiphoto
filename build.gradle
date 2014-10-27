@@ -1,0 +1,87 @@
+buildscript {
+    //需要从maven中央库得到gradle的android插件
+    repositories {
+        mavenCentral()
+    }
+ 
+    dependencies {
+		classpath 'com.android.tools.build:gradle:0.12.+'
+        classpath 'com.jakewharton.sdkmanager:gradle-plugin:+'
+    }
+}
+ 
+//声明项目是一个android构建
+apply plugin: 'android-sdk-manager'
+apply plugin: 'android'
+ 
+ configurations {
+    all*.exclude group: 'com.android.support', module: 'support-v4'
+    all*.exclude group: 'com.google.android.gms', module: 'play-services'
+}
+
+dependencies {
+    //同时用本地maven库查找依赖
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+ 
+    compile fileTree(dir: 'libs', include: '*.jar')
+    compile 'com.android.support:appcompat-v7:19.+'
+}
+ 
+//android构建的项目定义
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.1.0"
+
+    defaultConfig{
+      versionCode 1
+      versionName "1.0.0"
+      minSdkVersion 10
+      targetSdkVersion 19
+    }
+ 
+    //下面的代码路径不是推荐的新项目结构
+    //我仍然使用的Eclipse风格结构
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+ 
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+ 
+            renderscript.srcDirs = ['src']
+ 
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+ 
+        instrumentTest.setRoot('tests')
+    }
+ 
+    //声明创建一个带签名的发布版本细节
+    //keytool -genkey -alias android.keystore -keyalg RSA -validity 20000 -keystore android.keystore
+    signingConfigs {
+        release {
+            storeFile file("android.keystore")
+            storePassword "asdfasdf123"
+            keyAlias "android.keystore"
+            keyPassword "asdfasdf123"           
+        }
+    }
+	//遇到Lint错误不终止编译
+	lintOptions {
+	 abortOnError false
+	}
+    //声明此发布构建在签名之前需要运行proguard
+    buildTypes {
+        release {
+            runProguard false
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+            proguardFile 'proguard.cfg'
+            signingConfig signingConfigs.release
+        }    
+    }    
+}
