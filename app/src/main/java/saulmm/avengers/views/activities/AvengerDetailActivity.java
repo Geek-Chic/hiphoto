@@ -35,6 +35,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import javax.inject.Inject;
+
+import com.qiniu.android.storage.UploadManager;
 import saulmm.avengers.AvengersApplication;
 import saulmm.avengers.R;
 import saulmm.avengers.TransitionUtils;
@@ -81,7 +83,7 @@ public class AvengerDetailActivity extends AppCompatActivity implements Avengers
         initializeDependencyInjector();
         initializePresenter();
         initToolbar();
-        initTransitions();
+
     }
 
     @Override public void initActivityColors(Bitmap sourceBitmap) {
