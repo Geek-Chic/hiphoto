@@ -1,0 +1,65 @@
+apply plugin: 'com.android.library'
+
+repositories {
+    mavenCentral()
+
+    maven {
+        url "https://repo.commonsware.com.s3.amazonaws.com"
+    }
+}
+
+dependencies {
+    debugCompile project(':camera')
+    releaseCompile 'com.commonsware.cwac:camera:0.6.+'
+    compile 'com.android.support:support-v4:18.0.+'
+    compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
+}
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+}
+
+if (project.hasProperty('PUBLISH_GROUP_ID')) {
+    // from http://stackoverflow.com/a/19484146/115145
+
+    android.libraryVariants.all { variant ->
+        def name = variant.buildType.name
+        if (name.equals(com.android.builder.core.BuilderConstants.DEBUG)) {
+            return; // Skip debug builds.
+        }
+        def task = project.tasks.create "jar${name.capitalize()}", Jar
+        task.dependsOn variant.javaCompile
+        task.from variant.javaCompile.destinationDir
+        task.baseName = "cwac-camera-v9"
+        task.version = PUBLISH_VERSION
+        task.exclude('com/commonsware/cwac/**/BuildConfig.**')
+    }
+
+    apply plugin: 'maven'
+
+    uploadArchives {
+        repositories.mavenDeployer {
+            pom.groupId = PUBLISH_GROUP_ID
+            pom.artifactId = 'camera-v9'
+            pom.version = PUBLISH_VERSION
+
+            repository(url: LOCAL_REPO)
+        }
+    }
+}

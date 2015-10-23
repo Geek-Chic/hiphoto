@@ -14,4 +14,33 @@
     <dimen name="avenger_header_height">150dp</dimen>
     <dimen name="toolbarHeight">56dp</dimen>
 
+    <dimen name="navigation_drawer_width">240dp</dimen>
+
+    <!-- 分割线大小 -->
+    <dimen name="line_size">1px</dimen>
+
+    <!-- TitleBar -->
+    <dimen name="title_bar_height">48dip</dimen>
+
+    <!-- 间距 -->
+    <dimen name="small">7dp</dimen>
+    <dimen name="medium">12dp</dimen>
+    <dimen name="large">17dp</dimen>
+    <dimen name="xlarge">23dp</dimen>
+    <dimen name="xxlarge">27dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="fab_margin_right">0.1dp</dimen>
+    <dimen name="fab_margin_bottom">0.1dp</dimen>
+
+    <dimen name="app_bar_height">256dp</dimen>
+    <dimen name="nav_header_height">192dp</dimen>
+
+    <dimen name="expanded_toolbar_title_margin_start">64dp</dimen>
+
+    <dimen name="nav_header_text_margin_left">16dp</dimen>
+
 </resources>

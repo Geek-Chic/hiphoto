@@ -1,35 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    package="saulmm.avengers"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    >
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.hiphoto">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".AvengersApplication"
+        android:name="com.android.hiphoto.AvengersApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        >
+        android:theme="@style/AppTheme">
 
         <activity
-            android:name=".views.activities.AvengersListActivity"
+            android:name="com.android.hiphoto.views.activities.HomeActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            >
+            android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".views.activities.AvengerDetailActivity"
-            android:parentActivityName=".views.activities.AvengersListActivity"
-            android:theme="@style/AvengerDetailActivityTheme"
+            android:name="com.android.hiphoto.views.activities.AvengerDetailActivity"
+            android:parentActivityName="com.android.hiphoto.views.activities.AvengersListActivity"
             android:screenOrientation="portrait"
-            />
+            android:theme="@style/AvengerDetailActivityTheme" />
+
+        <!-- 个人设置 -->
+        <activity
+            android:name=".views.activities.LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden">
+            <intent-filter>
+                <action android:name="com.daman.beike.android.business.LOGIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="nl.changer.polypicker.ImagePickerActivity" />
     </application>
 </manifest>

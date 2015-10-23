@@ -1,0 +1,47 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/camera"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="take_picture"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/record"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="record"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/stop"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="stop"
+        android:visible="false"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/autofocus"
+        android:enabled="false"
+        android:title="auto_focus"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/single_shot"
+        android:checkable="true"
+        android:checked="false"
+        android:title="single_shot_mode"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/show_zoom"
+        android:checkable="true"
+        android:checked="true"
+        android:title="show_zoom"></item>
+    <item
+        android:id="@+id/flash"
+        android:checkable="true"
+        android:checked="true"
+        android:title="flash"></item>
+    <item
+        android:id="@+id/mirror_ffc"
+        android:checkable="true"
+        android:checked="false"
+        android:title="mirror_ffc"></item>
+
+</menu>

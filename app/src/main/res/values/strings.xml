@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Amazing heroes of Marvel</string>
+    <string name="app_name">嗨图</string>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi imperdiet condimentum libero, sit amet tincidunt felis sollicitudin non. Suspendisse malesuada augue ut nibh pharetra finibus. Quisque ut metus id nulla tincidunt faucibus. Morbi eget nisi finibus, maximus est vel, malesuada lacus. Curabitur tincidunt, velit eget venenatis rhoncus, lectus sem commodo erat, et ultrices metus leo eget urna. Integer semper erat ac erat tempus, tincidunt posuere lacus placerat. Morbi lobortis odio tortor, eu euismod leo pretium et. Fusce tempor felis condimentum, elementum justo sed, commodo tellus. Vivamus et tellus tincidunt, placerat velit vitae, fringilla arcu. Nullam luctus varius iaculis.</string>
 
     <string name="error.default.characters">Something happened loading characters</string>
@@ -11,4 +11,16 @@
     <string name="action.cancel">Cancel</string>
     <string name="dialog.filter">Filter</string>
     <string name="dialog.error">Error</string>
+    <string name="title_section_home">首页</string>
+    <string name="title_section_app_download">APP下载</string>
+    <string name="title_section_jenkins">Jenkins</string>
+    <string name="title_section_jira">Jira</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="exit_twice">再按一次退出程序</string>
+
+    <string name="nav_home">首页</string>
+    <string name="nav_map">地图</string>
+    <string name="nav_profile">个人</string>
 </resources>

@@ -15,4 +15,18 @@
     <color name="grey.dark">#ff2c2c2c</color>
 
     <color name="black_dark">#202020</color>
+
+    <!-- 主题色 -->
+    <color name="color_theme_blue">#30A6FA</color>
+    <color name="color_theme_blue_dark">#0180DA</color>
+
+    <!--绿色强调色-->
+    <color name="color_green_emphasize">#3BBB5A</color>
+
+    <color name="accentColor">#50514f</color>
+
+    <color name="bg_gray_fbfbfb">#fbfbfb</color>
+
+    <color name="nav_item_icon_tint_color">#333</color>
+    <color name="nav_item_text_color">#333</color>
 </resources>

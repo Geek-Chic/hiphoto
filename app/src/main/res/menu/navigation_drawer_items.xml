@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="all">
+        <item
+            android:id="@+id/navItem1"
+            android:checked="true"
+            android:title="@string/nav_home" />
+        <item
+            android:id="@+id/navItem2"
+            android:title="@string/nav_map" />
+
+        <item
+            android:id="@+id/navItem3"
+            android:title="@string/nav_profile" />
+
+    </group>
+
+</menu>
